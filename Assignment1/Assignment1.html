@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sapir Students</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: blueviolet;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            border: 1px solid black;
+            float: right;
+            width: 10%;
+            height: 100px;
+            background: wheat;
+            padding: 10px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px; /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: chartreuse;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        hr{
+            border: 3px solid black;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <hr>
+    <h2>Student</h2>
+    <hr>
+    <p>list of students<br>
+        <hr>
+    <small>sapir college</small></p>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="#">Pinhas</a></li>
+            <li><a href="#">Alex</a></li>
+            <li><a href="#">Nir</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Pinhas</h1>
+        <p>live in bney-nezrim.</p>
+    </article>
+</section>
+
+<footer>
+    <p>Alex</p>
+</footer>
+
+</body>
+</html>
